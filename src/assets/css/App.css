@@ -1,0 +1,96 @@
+.Navbar{
+  height: 70px;
+  z-index: 5;
+}
+.Navbar.scrolled{
+  background-color: #000000aa;
+  backdrop-filter: blur(20px);
+}
+.Navbar a:hover{
+  color:var(--c2)
+}
+.Navbar .sidebar{
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000aa;
+    backdrop-filter: blur(20px);
+  left: -110vw;
+  pointer-events:none;
+}
+.Navbar .sidebar.open{
+  left: 0;
+  pointer-events: all;
+}
+.Hero{
+  height: 70vh;
+}
+
+.FlowerHero{
+  height: min(900px, 90vh);
+  
+}
+.FlowerHero .mini-container{
+  height: 400%;
+}
+.FlowerHero .flower-container img{
+  object-fit: contain;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  opacity: 1;
+  transition: all 1.2s ease-out;
+  z-index: 1;
+}
+.FlowerHero .flower-container img.out{
+  transform: translate(-100%, -50%);
+  width: 80%;
+  z-index: 0;
+  transition: all .7s ease;
+  opacity: 0;
+}
+.FlowerHero .flower-container img.wait{
+  transform: translate(-0%, -50%);
+  width: 80%;
+  z-index: 0;
+  transition: all .7s ease;
+  opacity: 0;
+}
+
+.FlowerHero .mid-flower-container img{
+  object-fit: contain;
+  width: 40%;
+  opacity: 0.6;
+  filter: blur(5px);
+  top: 15%;
+  left: 80%;
+  transform: translateY(0%)  rotate(100deg);
+  transition: all 1.6s ease-out;
+}
+.FlowerHero .mid-flower-container img.out{
+  transform: translateY(110vh) rotate(0deg);
+  opacity: 0;
+  transition: all .7s ease;
+}
+.FlowerHero .mid-flower-container img.wait{
+  transform: translateY(-50vh) rotate(0deg);
+  opacity: 0;
+  transition: all .7s ease;
+}
+.FlowerHero .small-flower-container img{
+  transform: translateY(0%)  rotate(100deg);
+  object-fit: contain;
+  width: 30%;
+  top: 70%;
+  left: 15%;transition: all 1.6s ease-out;
+}
+.FlowerHero .small-flower-container img.out{
+  transform: translateY(60vh) rotate(0deg);
+  opacity: 0;
+  transition: all .7s ease;
+}
+.FlowerHero .small-flower-container img.wait{
+  transform: translateY(-90vh) rotate(0deg);
+  opacity: 0;
+  transition: all .7s ease;
+}
